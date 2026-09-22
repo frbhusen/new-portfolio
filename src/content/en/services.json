@@ -1,0 +1,10 @@
+{
+  "eyebrow": "Ways to work together",
+  "title": "Bring a real problem.",
+  "intro": "I am most useful when a project needs both a clear interface and the engineering discipline to support it.",
+  "items": [
+    ["01", "Web development", "Thoughtful frontend work and full-stack foundations for useful, reliable digital products."],
+    ["02", "Interface design", "Wireframes, visual systems, and interfaces that make the important action feel obvious."],
+    ["03", "Product thinking", "A collaborative partner for turning a rough idea into a clearer, more buildable direction."]
+  ]
+}

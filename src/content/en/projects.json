@@ -1,0 +1,10 @@
+{
+  "eyebrow": "The workbench",
+  "title": "Projects with a pulse.",
+  "intro": "A growing archive of personal and academic work. Each project is a chance to make a system clearer than I found it.",
+  "items": [
+    { "slug": "aerodent", "number": "01", "name": "AeroDent", "type": "Web platform", "description": "Turning a complex clinic workflow into a simple offline application for patient records, appointments, and treatment history.", "idea": "Make everyday clinic work easier to hold in one place.", "problem": "Important clinical information was spread across workflows that needed more structure and clarity.", "build": "A bilingual management system with patient records, odontograms, appointments, prescriptions, image records, and local-first handling.", "tags": ["UI design", "Frontend", "Systems"] },
+    { "slug": "quizland", "number": "02", "name": "Quizland", "type": "Learning experience", "description": "Building a learning platform that turns quiz management into a clearer experience for students, teachers, and administrators.", "idea": "Make practice feel like progress instead of pressure.", "problem": "Educational content needed a more practical way to move between learning, assessment, and administration.", "build": "A full-stack Flask experience with quiz and content management, student and teacher flows, and administrative tools.", "tags": ["Product design", "Interaction"] },
+    { "slug": "my-stickies", "number": "03", "name": "My Stickies", "type": "Productivity tool", "description": "A personal and business project that turns custom physical products into a more thoughtful online store experience.", "idea": "Give small creative products a place that feels as considered as the products themselves.", "problem": "A growing collection of stickers, planners, posters, bookmarks, and name tags needed a clearer way to be discovered.", "build": "A custom storefront direction shaped around product presentation, practical browsing, and a personal maker identity.", "tags": ["Frontend", "UX"] }
+  ]
+}

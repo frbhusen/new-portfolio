@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Hussein Rajab Portfolio"
+description = "A premium bilingual personal portfolio for Hussein Rajab, presenting his full-stack development, design work, projects, experience, and services to clients, employers, and collaborators."
+version = "1.0.0"
+id = "artifacts/hussein-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20641
+
+[services.development]
+run = "pnpm --filter @workspace/hussein-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/hussein-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/hussein-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20641"
+BASE_PATH = "/"

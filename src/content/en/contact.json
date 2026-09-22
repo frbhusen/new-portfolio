@@ -1,0 +1,10 @@
+{
+  "eyebrow": "Open channel",
+  "title": "Have something worth making?",
+  "intro": "Tell me what you are working through. A short note is enough to start.",
+  "emailLabel": "Email",
+  "email": "hussein.rajab.dev@gmail.com",
+  "socialLabel": "Social / code",
+  "social": "LinkedIn · GitHub",
+  "form": { "name": "Your name", "email": "Your email", "message": "What are you thinking about?", "send": "Send note", "sent": "Thanks — your note is ready to send." }
+}

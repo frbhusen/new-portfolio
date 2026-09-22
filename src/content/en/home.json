@@ -1,0 +1,39 @@
+{
+  "eyebrow": "Hussein Rajab · Junior Full-Stack Developer",
+  "title": "I turn ideas into software.",
+  "titleAccent": "ideas into software.",
+  "intro": "Full-stack development, thoughtful interfaces, and practical digital products.",
+  "locationLine": "Based in Syria · Informatics Engineering Student",
+  "identity": ["Developer", "Designer", "Problem Solver"],
+  "primaryCta": "See selected work",
+  "secondaryCta": "Start a conversation",
+  "orbit": ["CODE", "SYSTEMS", "FORM"],
+  "buildKicker": "A little about how I build",
+  "buildTitle": "Curiosity is the starting point.",
+  "buildIntro": "I like understanding how things work, then making the important parts feel simple.",
+  "principles": [
+    ["Curious", "I ask why before I decide how. Understanding the system makes the solution stronger."],
+    ["Problem solver", "I turn complicated problems into practical steps people can actually use."],
+    ["Details matter", "I keep refining the logic, the spacing, and the last interaction until it feels right."]
+  ],
+  "workKicker": "Selected work",
+  "workTitle": "Small systems, carefully made.",
+  "workIntro": "A selection of projects that show the same pattern: understand the problem, build the system, refine the experience.",
+  "whyKicker": "Why I build",
+  "whyTitle": "Ideas should not stay ideas.",
+  "whyCopy": "I enjoy taking a problem, understanding what is underneath it, and turning the idea behind it into something people can actually use.",
+  "whyFlow": ["Idea", "Problem", "Solution", "Software"],
+  "problemKicker": "How I approach a problem",
+  "problemTitle": "Understand the why.",
+  "problemTitleAccent": "the why.",
+  "problemSteps": ["Understand", "Break it down", "Build", "Test", "Refine"],
+  "problemNote": "I do not stop at “it works.” I keep refining until it feels right.",
+  "statement": "The best interfaces are not louder. They are more considered — <strong>clear in their structure, human in their details.</strong>",
+  "currentlyKicker": "Currently",
+  "currentlyTitle": "Still becoming.",
+  "currently": [
+    ["Building", "Web applications & personal products"],
+    ["Learning", "Advanced full-stack development"],
+    ["Exploring", "New ways to combine software and design"]
+  ]
+}

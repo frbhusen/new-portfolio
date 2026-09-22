@@ -1,0 +1,12 @@
+{
+  "eyebrow": "A little context",
+  "title": "I started with curiosity, and it turned into code.",
+  "intro": "My path moved from learning how programs work to building real projects, then into the space where full-stack development and design meet.",
+  "bio": "I am Hussein Rajab, a Junior Full-Stack Developer and designer building software from Syria with a global outlook. Informatics Engineering gave my curiosity structure; projects, teaching, and experimentation gave it direction.",
+  "cards": [
+    ["01", "Curiosity", "I like understanding how things work, not just making them work."],
+    ["02", "Problem solving", "I enjoy turning complicated problems into practical, buildable solutions."],
+    ["03", "Craft", "I care about the details, from the underlying logic to the final interface."]
+  ],
+  "skills": [["Frontend development", "Build"], ["Full-stack foundations", "Build"], ["Interface design", "Design"], ["Product thinking", "Design"], ["Programming teaching", "Practice"], ["Mathematical modeling", "Practice"]]
+}

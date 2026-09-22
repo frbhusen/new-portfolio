@@ -1,0 +1,10 @@
+{
+  "eyebrow": "قناة مفتوحة",
+  "title": "هل لديك شيء يستحق البناء؟",
+  "intro": "أخبرني بما تعمل عليه. رسالة قصيرة تكفي للبداية.",
+  "emailLabel": "البريد",
+  "email": "hussein.rajab.dev@gmail.com",
+  "socialLabel": "اجتماعي / كود",
+  "social": "LinkedIn · GitHub",
+  "form": { "name": "اسمك", "email": "بريدك", "message": "بماذا تفكر؟", "send": "إرسال رسالة", "sent": "شكراً — رسالتك جاهزة للإرسال." }
+}
