@@ -23,6 +23,14 @@
     {
       "id": "general",
       "label": "General"
+    },
+    {
+      "id": "competitions",
+      "label": "Competitions"
+    },
+    {
+      "id": "teaching",
+      "label": "Teaching"
     }
   ],
   "items": [
@@ -169,6 +177,133 @@
       "category": "ai",
       "featured": true,
       "url": "https://www.coursera.org/account/accomplishments/verify/ACXLM10P8RBS"
+    },
+    {
+      "id": "scs-second-place-2024",
+      "title": "Second Place: Programming Mathematical Modeling Competition",
+      "issuer": "Syrian Computer Society",
+      "image": "SCS 2nd.png",
+      "issued": "2024-04-27",
+      "description": "Second place in the programming mathematical modeling competition for children and teens (teens category), held on 27 April 2024.",
+      "tags": [
+        "Mathematical Modeling",
+        "Programming",
+        "Competition"
+      ],
+      "category": "competitions",
+      "featured": true,
+      "url": ""
+    },
+    {
+      "id": "kpm-coach-2024",
+      "title": "Certificate of Thanks: KPM 2024 Trainer",
+      "issuer": "Syrian Virtual University & Distinction and Creativity Agency",
+      "image": "KPM coach.png",
+      "issued": "2024",
+      "description": "Thanks for the effort put into the Kids and Adolescents Programming Marathon 2024, as a trainer.",
+      "tags": [
+        "Teaching",
+        "Programming",
+        "Mentoring"
+      ],
+      "category": "teaching",
+      "featured": false,
+      "url": ""
+    },
+    {
+      "id": "scs-first-place-2023",
+      "title": "First Place: Programming Mathematical Modeling Competition",
+      "issuer": "Syrian Computer Society",
+      "image": "SCS 1st.png",
+      "issued": "2023-06-24",
+      "description": "First place in the programming mathematical modeling competition for children and teens (teens category), held on 24 June 2023.",
+      "tags": [
+        "Mathematical Modeling",
+        "Programming",
+        "Competition"
+      ],
+      "category": "competitions",
+      "featured": true,
+      "url": ""
+    },
+    {
+      "id": "kpm-23",
+      "title": "Kids and Adolescents Programming Marathon 2023",
+      "issuer": "Syrian Virtual University & Distinction and Creativity Agency",
+      "image": "KPM23.png",
+      "issued": "2023",
+      "description": "Certificate of participation in the finals of the Kids and Adolescents Programming Marathon 2023, teens category, advanced level.",
+      "tags": [
+        "Competitive Programming",
+        "Programming",
+        "Competition"
+      ],
+      "category": "competitions",
+      "featured": false,
+      "url": ""
+    },
+    {
+      "id": "scs-excellence-3d-simulation",
+      "title": "Certificate of Excellence: 3D Target Pursuit Simulation",
+      "issuer": "Syrian Computer Society",
+      "image": "SCS.png",
+      "issued": "",
+      "description": "Recognition for excellence and participation in a project modeling a moving-target pursuit path in 3D space, within the Modeling and Simulation Club of the Latakia branch.",
+      "tags": [
+        "Modeling",
+        "Simulation",
+        "Mathematics"
+      ],
+      "category": "competitions",
+      "featured": false,
+      "url": ""
+    },
+    {
+      "id": "kpm-22",
+      "title": "Kids and Adolescents Programming Marathon 2022",
+      "issuer": "Syrian Virtual University & Distinction and Creativity Agency",
+      "image": "KPM22.png",
+      "issued": "2022",
+      "description": "Certificate of participation in the finals of the Kids and Adolescents Programming Marathon 2022.",
+      "tags": [
+        "Competitive Programming",
+        "Programming",
+        "Competition"
+      ],
+      "category": "competitions",
+      "featured": true,
+      "url": ""
+    },
+    {
+      "id": "scs-training-appreciation",
+      "title": "Certificate of Appreciation: Training",
+      "issuer": "Syrian Computer Society, Latakia Branch",
+      "image": "SCS coach.png",
+      "issued": "",
+      "description": "Appreciation for distinguished efforts and generosity in training, and for contributing to the society's mission of spreading knowledge.",
+      "tags": [
+        "Teaching",
+        "Training",
+        "Mentoring"
+      ],
+      "category": "teaching",
+      "featured": false,
+      "url": ""
+    },
+    {
+      "id": "hour-of-code",
+      "title": "The Hour of Code",
+      "issuer": "Code.org",
+      "image": "hour of code.png",
+      "issued": "",
+      "description": "Certificate of completion for the Hour of Code, showing an understanding of the basic concepts of computer science.",
+      "tags": [
+        "Computer Science",
+        "Programming Basics"
+      ],
+      "category": "programming",
+      "featured": false,
+      "url": ""
     }
   ]
 }

@@ -24,7 +24,7 @@ Content is split per section into an English + Arabic pair: `src/content/en/<sec
     "id": "unique-slug",
     "title": "Certificate name",
     "issuer": "Issuing organization",
-    "image": "/assets/certificates/my-cert.png",
+    "image": "my-cert.png",
     "issued": "2025-06",
     "description": "Short description.",
     "tags": ["HTML", "CSS"],
@@ -35,9 +35,9 @@ Content is split per section into an English + Arabic pair: `src/content/en/<sec
 }
 ```
 
-- **Add a certificate:** append an object to `items`. Put the image in `public/assets/certificates/` (leave `image` as `""` for a placeholder).
+- **Add a certificate:** append an object to `items`. Put the image in `src/content/certificates-images/` and set `image` to its file name (leave it `""` for a placeholder icon). `issued` may be `YYYY`, `YYYY-MM` or `YYYY-MM-DD`, or empty to hide the date. An empty `url` hides the "View Credential" link.
 - `category` must match a `categories[].id`. Filter buttons appear only for categories that have entries. Add a new category to `categories` in both languages.
-- `issued` is `YYYY-MM`. `featured: true` shows a badge. `url` opens in a new tab.
+- `featured: true` shows a badge. `url` opens in a new tab.
 
 ### Skills: `skills.json`
 

@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { ar, en, type Content } from '@/content';
 import { skillIcons } from '@/content/skill-icons';
 import { linkIcons } from '@/content/link-icons';
+import { certificateImage } from '@/content/certificate-images';
 import { ContactForm } from '@/components/ui/ContactForm';
 
 type Language = 'en' | 'ar';
@@ -99,8 +100,11 @@ function Skills({ content }: { content: Content }) {
 }
 
 function formatIssued(value: string, locale: string) {
-  const date = new Date(`${value}-01`.slice(0, 10));
-  return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short' }).format(date);
+  if (!value) return '';
+  if (/^\d{4}$/.test(value)) return value;
+  const date = new Date(value.length === 7 ? `${value}-01` : value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat(locale, value.length === 7 ? { year: 'numeric', month: 'short' } : { year: 'numeric', month: 'short', day: 'numeric' }).format(date);
 }
 
 function Certificates({ content }: { content: Content }) {
@@ -112,8 +116,8 @@ function Certificates({ content }: { content: Content }) {
   return <><PageIntro eyebrow={data.eyebrow} title={data.title} intro={data.intro} /><section className="section"><div className="shell">
     <div className="filter-bar" role="group" aria-label={content.labels.filterBy}>{[{ id: 'all', label: content.labels.allCategories }, ...categories].map(category => <button key={category.id} type="button" className="filter-chip" aria-pressed={active === category.id} onClick={() => setFilter(category.id)} data-testid={`filter-${category.id}`}>{category.label}</button>)}</div>
     {items.length === 0 ? <p className="muted">{content.labels.noResults}</p> : <div className="cert-grid">{items.map(item => <article className="cert-card reveal" key={item.id} data-testid={`card-certificate-${item.id}`}>
-      <div className="cert-media">{item.image ? <img src={item.image} alt={item.title} loading="lazy" /> : <Award aria-hidden="true" size={40} />}{item.featured && <span className="cert-badge">{content.labels.featured}</span>}</div>
-      <div className="cert-body"><div className="cert-meta"><span>{item.issuer}</span><span>{content.labels.issued} {formatIssued(item.issued, data.locale)}</span></div><h3>{item.title}</h3><p>{item.description}</p><div className="tags">{item.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div><a className="arrow-link" href={item.url} target="_blank" rel="noopener noreferrer" data-testid={`link-credential-${item.id}`}>{content.labels.viewCredential}<ArrowUpRight size={15} /></a></div>
+      <div className="cert-media">{certificateImage(item.image) ? <img src={certificateImage(item.image)} alt={item.title} loading="lazy" /> : <Award aria-hidden="true" size={40} />}{item.featured && <span className="cert-badge">{content.labels.featured}</span>}</div>
+      <div className="cert-body"><div className="cert-meta"><span>{item.issuer}</span>{item.issued && <span>{content.labels.issued} {formatIssued(item.issued, data.locale)}</span>}</div><h3>{item.title}</h3><p>{item.description}</p><div className="tags">{item.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div>{item.url && <a className="arrow-link" href={item.url} target="_blank" rel="noopener noreferrer" data-testid={`link-credential-${item.id}`}>{content.labels.viewCredential}<ArrowUpRight size={15} /></a>}</div>
     </article>)}</div>}
   </div></section></>;
 }
