@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Find me online",
+  "title": "All my links.",
+  "intro": "Everything in one place: code, contact, and where to see my work.",
+  "items": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "description": "Source code for my projects",
+      "url": "https://github.com/frbhusen",
+      "icon": "github"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "description": "My Instagram",
+      "url": "https://instagram.com/husr0",
+      "icon": "instagram"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio",
+      "description": "Projects, skills and certificates",
+      "url": "/projects",
+      "icon": "portfolio"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "description": "Start a conversation",
+      "url": "mailto:husen_.rajb@outlook.com",
+      "icon": "email"
+    }
+  ]
+}

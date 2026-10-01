@@ -3,8 +3,140 @@
   "title": "Projects with a pulse.",
   "intro": "A growing archive of personal and academic work. Each project is a chance to make a system clearer than I found it.",
   "items": [
-    { "slug": "aerodent", "number": "01", "name": "AeroDent", "type": "Web platform", "description": "Turning a complex clinic workflow into a simple offline application for patient records, appointments, and treatment history.", "idea": "Make everyday clinic work easier to hold in one place.", "problem": "Important clinical information was spread across workflows that needed more structure and clarity.", "build": "A bilingual management system with patient records, odontograms, appointments, prescriptions, image records, and local-first handling.", "tags": ["UI design", "Frontend", "Systems"] },
-    { "slug": "quizland", "number": "02", "name": "Quizland", "type": "Learning experience", "description": "Building a learning platform that turns quiz management into a clearer experience for students, teachers, and administrators.", "idea": "Make practice feel like progress instead of pressure.", "problem": "Educational content needed a more practical way to move between learning, assessment, and administration.", "build": "A full-stack Flask experience with quiz and content management, student and teacher flows, and administrative tools.", "tags": ["Product design", "Interaction"] },
-    { "slug": "my-stickies", "number": "03", "name": "My Stickies", "type": "Productivity tool", "description": "A personal and business project that turns custom physical products into a more thoughtful online store experience.", "idea": "Give small creative products a place that feels as considered as the products themselves.", "problem": "A growing collection of stickers, planners, posters, bookmarks, and name tags needed a clearer way to be discovered.", "build": "A custom storefront direction shaped around product presentation, practical browsing, and a personal maker identity.", "tags": ["Frontend", "UX"] }
+    {
+      "slug": "aerodent-online",
+      "number": "01",
+      "name": "AeroDent Online",
+      "type": "Cloud platform",
+      "description": "A multi-tenant dental clinic management system with role-based access, secure X-ray storage, inventory, and an Android companion app, alongside a local-first offline mode.",
+      "idea": "Give every clinic its own secure workspace while keeping the option to work fully offline.",
+      "problem": "Clinics needed shared records for doctors and secretaries without mixing data between clinics or exposing sensitive patient files.",
+      "build": "A Flask REST API on PostgreSQL with session authentication, a role matrix for head doctors, doctors and secretaries, strict clinic-level data isolation, protected X-ray streaming, inventory with batches and expiry, invoices, and a vanilla JS frontend in English and Arabic. An offline PWA mode and an Android WebView app share the same interface.",
+      "tags": [
+        "Flask",
+        "PostgreSQL",
+        "Vanilla JS",
+        "PWA",
+        "Android"
+      ],
+      "repo": "https://github.com/frbhusen/AeroDent-Online",
+      "live": "https://aerodent-online.husr0.codes/"
+    },
+    {
+      "slug": "aerodent",
+      "number": "02",
+      "name": "AeroDent",
+      "type": "Offline-first app",
+      "description": "An offline-first dental clinic application for patients, odontograms, treatments, appointments, and prescriptions, with no backend or internet needed.",
+      "idea": "Keep everyday clinic work available on the device, even without a connection.",
+      "problem": "Important clinical information was spread across different workflows, and many clinics cannot rely on a server or a stable connection.",
+      "build": "A vanilla JavaScript PWA storing data in IndexedDB, with a dental odontogram for permanent and primary teeth, treatment plans, printable prescriptions, X-ray records, JSON and Excel backup, PIN protection with PBKDF2 and auto-lock, English and Arabic with RTL, and a Windows desktop build through Tauri.",
+      "tags": [
+        "JavaScript",
+        "IndexedDB",
+        "PWA",
+        "Tauri"
+      ],
+      "repo": "https://github.com/frbhusen/Dentistry",
+      "live": "https://aerodent.husr0.codes/"
+    },
+    {
+      "slug": "edupath",
+      "number": "03",
+      "name": "EduPath",
+      "type": "Learning platform",
+      "description": "A Flask study platform where teachers manage subjects, lessons and MCQ tests, and students practice, compete in duels, and earn certificates.",
+      "idea": "Make practice feel like progress instead of pressure.",
+      "problem": "Learning content needed a practical way to move between lessons, assessment, and teacher management in one place.",
+      "build": "A Flask and SQLite app with teacher and student roles, subject, section and lesson management, MCQ tests with scores, friendly duels with invite links and synchronized timers, a gems reward system, leaderboards, a review of frequently missed questions, assignments, and certificate issuance with verification.",
+      "tags": [
+        "Flask",
+        "SQLite",
+        "Gamification"
+      ],
+      "repo": "https://github.com/frbhusen/edupath",
+      "live": "https://edu-path.app"
+    },
+    {
+      "slug": "my-stickies",
+      "number": "04",
+      "name": "My Stickies",
+      "type": "E-commerce platform",
+      "description": "A custom online store for a small sticker business, with a React storefront, a Django API, and its own admin dashboard.",
+      "idea": "A simple store that a small business can run without a heavy platform.",
+      "problem": "A sticker, poster and brooch shop needed guest checkout, flexible categories and variations, and an easy way to manage products.",
+      "build": "A Django REST Framework backend on SQLite with a React (Vite) storefront and custom admin dashboard. It supports guest checkout with a browser-stored cart, unlimited nested categories, product variations with their own prices, Google Drive images, and deployment on Ubuntu with Gunicorn and Nginx.",
+      "tags": [
+        "Django",
+        "React",
+        "Vite",
+        "SQLite"
+      ],
+      "repo": "https://github.com/frbhusen/MyStickies",
+      "live": "https://mystickies.tech"
+    },
+    {
+      "slug": "epay-store",
+      "number": "05",
+      "name": "EPay Store",
+      "type": "Web store",
+      "description": "A full-stack online store with a product catalog, cart and checkout, and a secure admin dashboard for products, categories and orders.",
+      "idea": "A complete shop experience, from browsing to order confirmation.",
+      "problem": "A small business needed customers to search, filter and order easily, and the owner to manage everything in one place.",
+      "build": "A Node.js and MongoDB backend with JWT-protected admin routes and email notifications through Nodemailer, plus a responsive React frontend with search, category filters, a cart, checkout, and order status management.",
+      "tags": [
+        "Node.js",
+        "MongoDB",
+        "React",
+        "JWT"
+      ],
+      "repo": "https://github.com/frbhusen/EPay-Store"
+    },
+    {
+      "slug": "cpp-debugger",
+      "number": "06",
+      "name": "C++ Debugger",
+      "type": "Developer tool",
+      "description": "A header-only debugging helper for competitive programming in C++ that prints variables and containers in a readable form.",
+      "idea": "Make debugging during contests quick and readable.",
+      "problem": "Printing variables and containers by hand is slow, and debug output must not slow down or break submissions on online judges.",
+      "build": "A single header file with a debug macro that prints names and values for common types and iterable containers such as vector, set, map and pair. It is skipped automatically on online judges via the ONLINE_JUDGE flag. Based on the well-known debug template by Tourist.",
+      "tags": [
+        "C++",
+        "Competitive programming"
+      ],
+      "repo": "https://github.com/frbhusen/Cpp-debugger"
+    },
+    {
+      "slug": "cpp-login-system",
+      "number": "07",
+      "name": "C++ Login System",
+      "type": "Console app",
+      "description": "A console login and register system in C++ that stores usernames and passwords in local text files.",
+      "idea": "Understand how a basic account flow works from scratch.",
+      "problem": "Learning file handling and program structure needs a small but complete example, with no libraries to hide the logic.",
+      "build": "A C++ program split into a login module and a main screen, with registration, sign-in checks against saved credentials, and local .txt file storage.",
+      "tags": [
+        "C++",
+        "File I/O"
+      ],
+      "repo": "https://github.com/frbhusen/CPP-Login-and-Register-system"
+    },
+    {
+      "slug": "pursuit-curve",
+      "number": "08",
+      "name": "2D Pursuit Curve",
+      "type": "Mathematical modeling",
+      "description": "A MATLAB simulation of a single-pursuer pursuit curve, solved numerically with the fourth-order Runge-Kutta method.",
+      "idea": "See a differential equation as a chase unfolding over time.",
+      "problem": "The path of a pursuer who always heads toward a moving target has no simple closed form in general, so it has to be solved numerically.",
+      "build": "A pure MATLAB implementation of the single-pursuer problem that integrates the differential equation with RK4 and plots the resulting trajectories.",
+      "tags": [
+        "MATLAB",
+        "Runge-Kutta",
+        "Modeling"
+      ],
+      "repo": "https://github.com/frbhusen/2d-Purstuit-Curve"
+    }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "eyebrow": "تجدني هنا",
+  "title": "كل روابطي.",
+  "intro": "كل شيء في مكان واحد: الشيفرة والتواصل وأعمالي.",
+  "items": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "description": "الشيفرة المصدرية لمشاريعي",
+      "url": "https://github.com/frbhusen",
+      "icon": "github"
+    },
+    {
+      "id": "portfolio",
+      "label": "معرض الأعمال",
+      "description": "المشاريع والمهارات والشهادات",
+      "url": "/projects",
+      "icon": "portfolio"
+    },
+    {
+      "id": "email",
+      "label": "البريد الإلكتروني",
+      "description": "ابدأ محادثة",
+      "url": "mailto:hussein.rajab.dev@gmail.com",
+      "icon": "email"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "eyebrow": "Working range",
+  "title": "Tools for the next question.",
+  "intro": "What I build with and how I think, grouped by kind. No scores, just the honest list.",
+  "groups": [
+    {
+      "id": "languages",
+      "title": "Languages",
+      "items": [
+        {
+          "name": "HTML",
+          "icon": "html5"
+        },
+        {
+          "name": "CSS",
+          "icon": "css"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "typescript"
+        },
+        {
+          "name": "Python",
+          "icon": "python"
+        },
+        {
+          "name": "C++",
+          "icon": "c++"
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks & Backend",
+      "items": [
+        {
+          "name": "Django",
+          "icon": "django"
+        },
+        {
+          "name": "Flask",
+          "icon": "flask"
+        },
+        {
+          "name": "Node.js",
+          "icon": "nodejs"
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "tailwindcss"
+        },
+        {
+          "name": "BootStrap",
+          "icon": "bootstrap"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Databases & Storage",
+      "items": [
+        {
+          "name": "SQLite",
+          "icon": "sqlite"
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "postgresql"
+        },
+        {
+          "name": "MySQL",
+          "icon": "mysql"
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mongodb"
+        }
+
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Deployment",
+      "items": [
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "GitHub",
+          "icon": "github"
+        },
+        {
+          "name": "Linux Server",
+          "icon": "linuxserver"
+        },
+        {
+          "name": "Linux",
+          "icon": "linux"
+        },
+        {
+          "name": "Vercel",
+          "icon": "vercel"
+        },
+        {
+          "name": "Apache",
+          "icon": "apache"
+        },
+        {
+          "name": "CloudFlare DNS",
+          "icon": "cloudflare"
+        }
+
+      ]
+    },
+    {
+      "id": "engines",
+      "title": "Engines & Educational Tech",
+      "items": [
+        {
+          "name": "Scratch and Pictoblox",
+          "icon": "scratch"
+        },
+        {
+          "name": "Godot Game Engine",
+          "icon": "godot"
+        },
+        {
+          "name": "MIT App Inventor",
+          "icon": ""
+        },
+        {
+          "name": "Unity",
+          "icon": "unity"
+        },
+        {
+          "name": "Kodu Game Lab",
+          "icon": ""
+        }
+      ]
+
+    },
+    {
+      "id": "AI tools",
+      "title": "AI tools",
+      "items": [
+        {
+          "name": "Claude",
+          "icon": "claude"
+        },
+        {
+          "name": "Claude Code",
+          "icon": "claudecode"
+        },
+        {
+          "name": "NoteBookLM",
+          "icon": "notebooklm"
+        },
+        {
+          "name": "Gemini",
+          "icon": "gemini"
+        },
+        {
+          "name": "Github Copolit",
+          "icon": "copilot"
+        },
+        {
+          "name": "Codex",
+          "icon": ""
+        },
+        {
+          "name": "AntiGravity",
+          "icon": ""
+        }
+
+      ]
+
+    },
+    {
+      "id": "competencies",
+      "title": "Core Competencies",
+      "items": [
+        {
+          "name": "Interface design"
+        },
+        {
+          "name": "Product thinking"
+        },
+        {
+          "name": "Programming teaching"
+        },
+        {
+          "name": "Mathematical modeling"
+        }
+      ]
+    }
+  ]
+}

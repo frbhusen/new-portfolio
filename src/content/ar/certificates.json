@@ -1,0 +1,174 @@
+{
+  "eyebrow": "الاعتمادات",
+  "title": "التعلّم، بالدليل.",
+  "intro": "دورات وشهادات تدعم ما أبنيه. صفِّ حسب الموضوع، أو افتح أي شهادة للتحقق منها.",
+  "locale": "ar-u-nu-latn",
+  "categories": [
+    {
+      "id": "programming",
+      "label": "البرمجة"
+    },
+    {
+      "id": "web",
+      "label": "تطوير الويب"
+    },
+    {
+      "id": "security",
+      "label": "الأمن"
+    },
+    {
+      "id": "ai",
+      "label": "الذكاء الاصطناعي"
+    },
+    {
+      "id": "general",
+      "label": "عام"
+    }
+  ],
+  "items": [
+    {
+      "id": "html-css-javascript",
+      "title": "مقدمة في HTML وCSS وJavaScript",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2026-08",
+      "description": "بناء صفحات ويب منظمة ومنسقة وتفاعلية، من أساسيات HTML وCSS إلى التعامل مع DOM والتحقق من النماذج.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "تصميم متجاوب"
+      ],
+      "category": "web",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/GY5HPDV3733V"
+    },
+    {
+      "id": "intro-python",
+      "title": "مقدمة في Python",
+      "issuer": "Coursera",
+      "image": "",
+      "issued": "2026-07",
+      "description": "أساسيات Python: المتغيرات والإدخال والقرارات والحلقات.",
+      "tags": [
+        "Python",
+        "مبادئ البرمجة"
+      ],
+      "category": "programming",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/6ZUX3MGSKKE1"
+    },
+    {
+      "id": "bootstrap",
+      "title": "تطوير المواقع والواجهات الأمامية باستخدام Bootstrap",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2026-05",
+      "description": "بناء مواقع مرنة ومتجاوبة ومكونات واجهة باستخدام إطار Bootstrap.",
+      "tags": [
+        "Bootstrap",
+        "CSS",
+        "تصميم متجاوب"
+      ],
+      "category": "web",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/35NUYCK6REAE"
+    },
+    {
+      "id": "resume-google-docs",
+      "title": "إنشاء سيرة ذاتية ورسالة تعريف باستخدام Google Docs",
+      "issuer": "Coursera",
+      "image": "",
+      "issued": "2026-03",
+      "description": "كتابة سيرة ذاتية ورسالة تعريف احترافيتين وتنسيقهما ثم تصديرهما.",
+      "tags": [
+        "Google Docs",
+        "الكتابة المهنية"
+      ],
+      "category": "general",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/K7KVDAG8M0VE"
+    },
+    {
+      "id": "global-diplomacy",
+      "title": "الدبلوماسية العالمية: الأمم المتحدة في العالم",
+      "issuer": "جامعة لندن",
+      "image": "",
+      "issued": "2025-12",
+      "description": "نظرة على عمل الأمم المتحدة في العلاقات الدولية والسياسات والتنمية المستدامة.",
+      "tags": [
+        "الدبلوماسية",
+        "العلاقات الدولية",
+        "تحليل السياسات"
+      ],
+      "category": "general",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/4K0TUTR96T1N"
+    },
+    {
+      "id": "cpp-basics",
+      "title": "أساسيات C++‎: الاختيار والتكرار",
+      "issuer": "Codio",
+      "image": "",
+      "issued": "2025-11",
+      "description": "أساسيات C++‎: المتغيرات والعوامل وجمل الاختيار والحلقات.",
+      "tags": [
+        "C++",
+        "المنطق الحسابي",
+        "علوم الحاسوب"
+      ],
+      "category": "programming",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/LRZCA7ILPLEG"
+    },
+    {
+      "id": "kali-linux",
+      "title": "القرصنة الأخلاقية باستخدام Kali Linux",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2025-11",
+      "description": "اختبار اختراق عملي بأدوات Kali Linux في بيئات مخبرية محكومة، مع الأتمتة عبر Bash.",
+      "tags": [
+        "Kali Linux",
+        "اختبار الاختراق",
+        "Bash",
+        "Linux"
+      ],
+      "category": "security",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/PTKJH5HK2R8C"
+    },
+    {
+      "id": "ethical-hacking-principles",
+      "title": "مقدمة في مبادئ القرصنة الأخلاقية",
+      "issuer": "SkillUp",
+      "image": "",
+      "issued": "2025-09",
+      "description": "أدوار القرصنة الأخلاقية وحدودها القانونية وممارسات الإفصاح المسؤول.",
+      "tags": [
+        "القرصنة الأخلاقية",
+        "الأمن السيبراني",
+        "GDPR"
+      ],
+      "category": "security",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/UHXBUI23S8VN"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "الذكاء الاصطناعي التوليدي: أساسيات هندسة الأوامر",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2025-09",
+      "description": "تقنيات هندسة الأوامر وأفضل الممارسات للحصول على نتائج موثوقة من نماذج الذكاء الاصطناعي التوليدي.",
+      "tags": [
+        "Prompt Engineering",
+        "الذكاء الاصطناعي التوليدي",
+        "ChatGPT"
+      ],
+      "category": "ai",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/ACXLM10P8RBS"
+    }
+  ]
+}

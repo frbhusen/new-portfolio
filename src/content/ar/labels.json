@@ -15,5 +15,16 @@
   "notFoundHome": "العودة للرئيسية",
   "projectIdea": "الفكرة",
   "projectProblem": "المشكلة",
-  "projectBuild": "ما بنيته"
+  "projectBuild": "ما بنيته",
+  "viewCredential": "عرض الشهادة",
+  "featured": "مميزة",
+  "issued": "تاريخ الإصدار",
+  "allCategories": "الكل",
+  "filterBy": "التصفية حسب الفئة",
+  "noResults": "لا توجد شهادات في هذه الفئة بعد.",
+  "skillsCta": "شاهد خريطة المهارات كاملة",
+  "certificatesLabel": "الاعتمادات",
+  "sourceCode": "الشيفرة المصدرية",
+  "liveSite": "الموقع المباشر",
+  "links": "الروابط"
 }

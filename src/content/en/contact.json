@@ -3,8 +3,17 @@
   "title": "Have something worth making?",
   "intro": "Tell me what you are working through. A short note is enough to start.",
   "emailLabel": "Email",
-  "email": "hussein.rajab.dev@gmail.com",
+  "email": "husen_.rajb@outlook.com",
   "socialLabel": "Social / code",
-  "social": "LinkedIn · GitHub",
-  "form": { "name": "Your name", "email": "Your email", "message": "What are you thinking about?", "send": "Send note", "sent": "Thanks — your note is ready to send." }
+  "social": "All my links",
+  "form": {
+    "name": "Your name",
+    "email": "Your email",
+    "message": "What are you thinking about?",
+    "send": "Send note",
+    "sent": "Sent. Thank you, I will reply soon.",
+    "sending": "Sending…",
+    "error": "Something went wrong and your note was not sent. Please try again or email me directly.",
+    "notConfigured": "The contact form is not configured yet. Please email me directly."
+  }
 }

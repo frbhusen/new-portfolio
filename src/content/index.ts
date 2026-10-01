@@ -7,6 +7,9 @@ import enEducation from './en/education.json';
 import enAchievements from './en/achievements.json';
 import enServices from './en/services.json';
 import enContact from './en/contact.json';
+import enCertificates from './en/certificates.json';
+import enSkills from './en/skills.json';
+import enLinks from './en/links.json';
 import enLabels from './en/labels.json';
 import arSite from './ar/site.json';
 import arHome from './ar/home.json';
@@ -17,6 +20,9 @@ import arEducation from './ar/education.json';
 import arAchievements from './ar/achievements.json';
 import arServices from './ar/services.json';
 import arContact from './ar/contact.json';
+import arCertificates from './ar/certificates.json';
+import arSkills from './ar/skills.json';
+import arLinks from './ar/links.json';
 import arLabels from './ar/labels.json';
 
 export const en = {
@@ -29,6 +35,9 @@ export const en = {
   achievements: enAchievements,
   services: enServices,
   contact: enContact,
+  certificates: enCertificates,
+  skills: enSkills,
+  links: enLinks,
   labels: enLabels,
 } as const;
 
@@ -42,6 +51,9 @@ export const ar = {
   achievements: arAchievements,
   services: arServices,
   contact: arContact,
+  certificates: arCertificates,
+  skills: arSkills,
+  links: arLinks,
   labels: arLabels,
 } as const;
 

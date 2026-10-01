@@ -1,8 +1,11 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, Menu, Moon, Sun, X } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Award, Check, Menu, Moon, Sun, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams, Router as WouterRouter } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { ar, en, type Content } from '@/content';
+import { skillIcons } from '@/content/skill-icons';
+import { linkIcons } from '@/content/link-icons';
+import { ContactForm } from '@/components/ui/ContactForm';
 
 type Language = 'en' | 'ar';
 type Project = Content['projects']['items'][number];
@@ -31,7 +34,7 @@ function Header({ content, language, setLanguage, dark, setDark }: { content: Co
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const items = Object.entries(content.nav) as [keyof Content['nav'], string][];
-  const paths: Record<keyof Content['nav'], string> = { home: '/', about: '/about', projects: '/projects', experience: '/experience', education: '/education', achievements: '/achievements', services: '/services', contact: '/contact' };
+  const paths: Record<keyof Content['nav'], string> = { home: '/', about: '/about', skills: '/skills', projects: '/projects', certificates: '/certificates', experience: '/experience', achievements: '/achievements', contact: '/contact' };
   return (
     <header className="site-header">
       <div className="shell header-inner">
@@ -73,7 +76,7 @@ function Home({ content }: { content: Content }) {
       <div className="hero-orbit reveal delay-2" aria-label="Developer designer identity graphic"><div className="grid-lines" /><div className="orbit"><div className="orbit-core">HR</div><span className="orbit-label top">{content.home.orbit[0]}</span><span className="orbit-label right">{content.home.orbit[1]}</span><span className="orbit-label bottom">{content.home.orbit[2]}</span><span className="orbital-dot" /></div></div>
     </div></section>
     <section className="section build-section"><div className="shell"><div className="section-header"><div><div className="section-kicker">{content.home.buildKicker}</div><h2 className="section-title">{content.home.buildTitle}</h2></div><p className="section-intro">{content.home.buildIntro}</p></div><div className="principle-list">{content.home.principles.map(([title, copy], index) => <article className="principle-row reveal" key={title}><span className="principle-index">0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
-    <section className="section"><div className="shell"><div className="section-header"><div><div className="section-kicker">{content.home.workKicker}</div><h2 className="section-title">{content.home.workTitle}</h2></div><p className="section-intro">{content.home.workIntro}</p></div><ProjectGrid content={content} limit={3} /></div></section>
+    <section className="section"><div className="shell"><div className="section-header"><div><div className="section-kicker">{content.home.workKicker}</div><h2 className="section-title">{content.home.workTitle}</h2></div><p className="section-intro">{content.home.workIntro}</p></div><ProjectGrid content={content} limit={3} featured /></div></section>
     <section className="section problem-section"><div className="shell"><div className="problem-heading"><div className="section-kicker">{content.home.problemKicker}</div><h2 className="section-title">{content.home.problemTitle.replace(content.home.problemTitleAccent, '')}<br /><em>{content.home.problemTitleAccent}</em></h2></div><div className="problem-path">{content.home.problemSteps.map((step, index) => <div className="problem-step" key={step}><span>0{index + 1}</span><strong>{step}</strong>{index < content.home.problemSteps.length - 1 && <ArrowDown />}</div>)}</div><p className="problem-note">{content.home.problemNote}</p></div></section>
     <section className="section why-section"><div className="shell why-layout"><div><div className="section-kicker">{content.home.whyKicker}</div><h2 className="section-title">{content.home.whyTitle}</h2></div><div><p className="why-copy">{content.home.whyCopy}</p><div className="why-flow">{content.home.whyFlow.map((item, index) => <span key={item}><b>{item}</b>{index < content.home.whyFlow.length - 1 && <ArrowRight size={15} />}</span>)}</div></div></div></section>
     <section className="statement"><div className="shell"><p dangerouslySetInnerHTML={{ __html: content.home.statement }} /></div></section>
@@ -81,13 +84,38 @@ function Home({ content }: { content: Content }) {
   </>;
 }
 
-function ProjectGrid({ content, limit }: { content: Content; limit?: number }) {
+function ProjectGrid({ content, limit, featured }: { content: Content; limit?: number; featured?: boolean }) {
   const projects = content.projects.items.slice(0, limit);
-  return <div className="project-grid">{projects.map((project, index) => <Link href={`/projects/${project.slug}`} className={`project-card reveal delay-${index + 1} ${index === 0 ? 'tall' : 'small'}`} key={project.slug} data-testid={`card-project-${project.slug}`}><div className="project-top"><span className="project-index">{project.number} / 03</span><span className="project-type">{project.type}</span></div><div><h3>{project.name}</h3><p>{project.description}</p><div className="project-footer"><div className="tags">{project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div><ArrowUpRight size={18} color="hsl(var(--accent))" /></div></div></Link>)}</div>;
+  return <div className={`project-grid${featured ? '' : ' uniform'}`}>{projects.map((project, index) => <Link href={`/projects/${project.slug}`} className={`project-card reveal delay-${index + 1} ${featured && index === 0 ? 'tall' : 'small'}`} key={project.slug} data-testid={`card-project-${project.slug}`}><div className="project-top"><span className="project-index">{project.number} / {String(content.projects.items.length).padStart(2, '0')}</span><span className="project-type">{project.type}</span></div><div><h3>{project.name}</h3><p>{project.description}</p><div className="project-footer"><div className="tags">{project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div><ArrowUpRight size={18} color="hsl(var(--accent))" /></div></div></Link>)}</div>;
 }
 
 function About({ content }: { content: Content }) {
-  return <><PageIntro eyebrow={content.about.eyebrow} title={content.about.title} intro={content.about.intro} /><section className="section story-section"><div className="shell story-layout"><p className="bio-copy">{content.about.bio}</p><div className="principle-list about-principles">{content.about.cards.map(([number, title, copy]) => <article className="principle-row" key={number}><span className="principle-index">{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section><section className="section"><div className="shell split-grid"><div><div className="section-kicker">{content.labels.workingRange}</div><h2 className="section-title" dangerouslySetInnerHTML={{ __html: content.labels.skillsTitle }} /></div><div className="skill-list">{content.about.skills.map(([name, type]) => <div className="skill-row" key={name} data-testid={`skill-${name}`}><span>{name}</span><span>{type}</span></div>)}</div></div></section></>;
+  return <><PageIntro eyebrow={content.about.eyebrow} title={content.about.title} intro={content.about.intro} /><section className="section story-section"><div className="shell story-layout"><p className="bio-copy">{content.about.bio}</p><div className="principle-list about-principles">{content.about.cards.map(([number, title, copy]) => <article className="principle-row" key={number}><span className="principle-index">{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section><section className="section"><div className="shell split-grid"><div><div className="section-kicker">{content.labels.workingRange}</div><h2 className="section-title" dangerouslySetInnerHTML={{ __html: content.labels.skillsTitle }} /></div><div><Link href="/skills" className="arrow-link" data-testid="link-about-skills">{content.labels.skillsCta}<ArrowUpRight size={15} /></Link></div></div></section></>;
+}
+
+function Skills({ content }: { content: Content }) {
+  const data = content.skills;
+  return <><PageIntro eyebrow={data.eyebrow} title={data.title} intro={data.intro} /><section className="section"><div className="shell skill-groups">{data.groups.map(group => <div className="skill-group reveal" key={group.id} data-testid={`skill-group-${group.id}`}><h2 className="skill-group-title">{group.title}</h2><ul className="skill-chips">{group.items.map(item => { const Icon = 'icon' in item && item.icon ? skillIcons[item.icon] : undefined; return <li className="skill-chip" key={item.name} data-testid={`skill-${item.name}`}>{Icon && <Icon aria-hidden="true" />}<span>{item.name}</span></li>; })}</ul></div>)}</div></section></>;
+}
+
+function formatIssued(value: string, locale: string) {
+  const date = new Date(`${value}-01`.slice(0, 10));
+  return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short' }).format(date);
+}
+
+function Certificates({ content }: { content: Content }) {
+  const data = content.certificates;
+  const [filter, setFilter] = useState('all');
+  const categories = data.categories.filter(category => data.items.some(item => item.category === category.id));
+  const active = categories.some(category => category.id === filter) ? filter : 'all';
+  const items = data.items.filter(item => active === 'all' || item.category === active);
+  return <><PageIntro eyebrow={data.eyebrow} title={data.title} intro={data.intro} /><section className="section"><div className="shell">
+    <div className="filter-bar" role="group" aria-label={content.labels.filterBy}>{[{ id: 'all', label: content.labels.allCategories }, ...categories].map(category => <button key={category.id} type="button" className="filter-chip" aria-pressed={active === category.id} onClick={() => setFilter(category.id)} data-testid={`filter-${category.id}`}>{category.label}</button>)}</div>
+    {items.length === 0 ? <p className="muted">{content.labels.noResults}</p> : <div className="cert-grid">{items.map(item => <article className="cert-card reveal" key={item.id} data-testid={`card-certificate-${item.id}`}>
+      <div className="cert-media">{item.image ? <img src={item.image} alt={item.title} loading="lazy" /> : <Award aria-hidden="true" size={40} />}{item.featured && <span className="cert-badge">{content.labels.featured}</span>}</div>
+      <div className="cert-body"><div className="cert-meta"><span>{item.issuer}</span><span>{content.labels.issued} {formatIssued(item.issued, data.locale)}</span></div><h3>{item.title}</h3><p>{item.description}</p><div className="tags">{item.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div><a className="arrow-link" href={item.url} target="_blank" rel="noopener noreferrer" data-testid={`link-credential-${item.id}`}>{content.labels.viewCredential}<ArrowUpRight size={15} /></a></div>
+    </article>)}</div>}
+  </div></section></>;
 }
 
 function Projects({ content }: { content: Content }) {
@@ -99,7 +127,7 @@ function ProjectDetail({ content }: { content: Content }) {
   const project = content.projects.items.find(item => item.slug === slug) as Project | undefined;
   if (!project) return <NotFound content={content} />;
   const projectNotes = [[content.labels.projectIdea, project.idea], [content.labels.projectProblem, project.problem], [content.labels.projectBuild, project.build]].filter(([, value]) => value);
-  return <><PageIntro eyebrow={`${project.number} · ${project.type}`} title={project.name} intro={project.description} /><section className="section project-story"><div className="shell project-story-grid"><div className="project-story-lead"><div className="section-kicker">{content.labels.projectNotes}</div><p className="bio-copy">{project.description}</p></div><div className="project-notes">{projectNotes.map(([label, value]) => <article key={label}><span>{label}</span><p>{value}</p></article>)}<article><span>{content.labels.toolkit}</span><div className="tags">{project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></article></div></div></section><section className="section"><div className="shell"><Link href="/projects" className="arrow-link" data-testid="link-back-projects"><ArrowLeft size={15} /> {content.labels.backToProjects}</Link></div></section></>;
+  return <><PageIntro eyebrow={`${project.number} · ${project.type}`} title={project.name} intro={project.description} /><section className="section project-story"><div className="shell project-story-grid"><div className="project-story-lead"><div className="section-kicker">{content.labels.projectNotes}</div><p className="bio-copy">{project.description}</p></div><div className="project-notes">{projectNotes.map(([label, value]) => <article key={label}><span>{label}</span><p>{value}</p></article>)}<article><span>{content.labels.toolkit}</span><div className="tags">{project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></article><article><span>{content.labels.links}</span><div className="project-links"><a className="arrow-link" href={project.repo} target="_blank" rel="noopener noreferrer" data-testid="link-project-repo">{content.labels.sourceCode}<ArrowUpRight size={15} /></a>{'live' in project && project.live && <a className="arrow-link" href={project.live} target="_blank" rel="noopener noreferrer" data-testid="link-project-live">{content.labels.liveSite}<ArrowUpRight size={15} /></a>}</div></article></div></div></section><section className="section"><div className="shell"><Link href="/projects" className="arrow-link" data-testid="link-back-projects"><ArrowLeft size={15} /> {content.labels.backToProjects}</Link></div></section></>;
 }
 
 function TimelinePage({ content, section }: { content: Content; section: 'experience' | 'education' | 'achievements' }) {
@@ -111,10 +139,27 @@ function Services({ content }: { content: Content }) {
   return <><PageIntro eyebrow={content.services.eyebrow} title={content.services.title} intro={content.services.intro} /><section className="section"><div className="shell service-grid">{content.services.items.map(([number, title, copy]) => <article className="service-card reveal" key={number}><div className="service-number">{number}</div><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></section></>;
 }
 
+function LinkTree({ content }: { content: Content }) {
+  const data = content.links;
+  return <section className="section linktree"><div className="shell linktree-inner reveal">
+    <span className="brand-mark linktree-mark">HR</span>
+    <div className="eyebrow">{data.eyebrow}</div>
+    <h1 data-testid="text-page-title">{data.title}</h1>
+    <p className="linktree-intro">{data.intro}</p>
+    <ul className="linktree-list">{data.items.map(item => {
+      const Icon = linkIcons[item.icon] ?? linkIcons.website;
+      const external = /^(https?:|mailto:)/.test(item.url);
+      const body = <><Icon className="linktree-icon" aria-hidden="true" size={20} /><span className="linktree-text"><strong>{item.label}</strong><span>{item.description}</span></span><ArrowUpRight size={18} /></>;
+      return <li key={item.id}>{external
+        ? <a className="linktree-link" href={item.url} {...(item.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} data-testid={`link-tree-${item.id}`}>{body}</a>
+        : <Link className="linktree-link" href={item.url} data-testid={`link-tree-${item.id}`}>{body}</Link>}</li>;
+    })}</ul>
+  </div></section>;
+}
+
 function Contact({ content }: { content: Content }) {
-  const [sent, setSent] = useState(false);
   const form = content.contact.form;
-  return <><PageIntro eyebrow={content.contact.eyebrow} title={content.contact.title} intro={content.contact.intro} /><section className="section"><div className="shell contact-layout"><div><div className="section-kicker">{content.labels.findMe}</div><div className="contact-links"><a href={`mailto:${content.contact.email}`} className="contact-link" data-testid="link-email"><span>{content.contact.emailLabel}</span><span>{content.contact.email}<ArrowUpRight size={15} /></span></a><a href="https://github.com" className="contact-link" target="_blank" rel="noreferrer" data-testid="link-social"><span>{content.contact.socialLabel}</span><span>{content.contact.social}<ArrowUpRight size={15} /></span></a></div></div><form className="contact-form" onSubmit={(event) => { event.preventDefault(); setSent(true); }}><div className="field"><label htmlFor="contact-name">{form.name}</label><input id="contact-name" name="name" required data-testid="input-contact-name" /></div><div className="field"><label htmlFor="contact-email">{form.email}</label><input id="contact-email" name="email" type="email" required data-testid="input-contact-email" /></div><div className="field"><label htmlFor="contact-message">{form.message}</label><textarea id="contact-message" name="message" rows={5} required data-testid="input-contact-message" /></div><button className="button primary" type="submit" data-testid="button-send-message">{sent ? <><Check size={15} /> {form.sent}</> : <>{form.send} <ArrowUpRight size={15} /></>}</button></form></div></section></>;
+  return <><PageIntro eyebrow={content.contact.eyebrow} title={content.contact.title} intro={content.contact.intro} /><section className="section"><div className="shell contact-layout"><div><div className="section-kicker">{content.labels.findMe}</div><div className="contact-links"><a href={`mailto:${content.contact.email}`} className="contact-link" data-testid="link-email"><span>{content.contact.emailLabel}</span><span>{content.contact.email}<ArrowUpRight size={15} /></span></a><Link href="/links" className="contact-link" data-testid="link-social"><span>{content.contact.socialLabel}</span><span>{content.contact.social}<ArrowUpRight size={15} /></span></Link></div></div><ContactForm text={form} /></div></section></>;
 }
 
 function NotFound({ content }: { content: Content }) {
@@ -126,12 +171,15 @@ function Router({ content }: { content: Content }) {
   return <ErrorBoundary resetKey={location}><Switch>
     <Route path="/" component={() => <Home content={content} />} />
     <Route path="/about" component={() => <About content={content} />} />
+    <Route path="/skills" component={() => <Skills content={content} />} />
+    <Route path="/certificates" component={() => <Certificates content={content} />} />
     <Route path="/projects" component={() => <Projects content={content} />} />
     <Route path="/projects/:slug" component={() => <ProjectDetail content={content} />} />
     <Route path="/experience" component={() => <TimelinePage content={content} section="experience" />} />
     <Route path="/education" component={() => <TimelinePage content={content} section="education" />} />
     <Route path="/achievements" component={() => <TimelinePage content={content} section="achievements" />} />
     <Route path="/services" component={() => <Services content={content} />} />
+    <Route path="/links" component={() => <LinkTree content={content} />} />
     <Route path="/contact" component={() => <Contact content={content} />} />
     <Route component={() => <NotFound content={content} />} />
   </Switch></ErrorBoundary>;

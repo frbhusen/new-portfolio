@@ -1,0 +1,109 @@
+{
+  "eyebrow": "نطاق العمل",
+  "title": "أدوات للسؤال التالي.",
+  "intro": "ما أبني به وكيف أفكر، مجمّعًا حسب النوع. بلا درجات، فقط القائمة الصادقة.",
+  "groups": [
+    {
+      "id": "languages",
+      "title": "اللغات",
+      "items": [
+        {
+          "name": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "typescript"
+        },
+        {
+          "name": "Python",
+          "icon": "python"
+        },
+        {
+          "name": "HTML",
+          "icon": "html5"
+        },
+        {
+          "name": "CSS",
+          "icon": "css3"
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "الأطر والخلفية",
+      "items": [
+        {
+          "name": "React",
+          "icon": "react"
+        },
+        {
+          "name": "Flask",
+          "icon": "flask"
+        },
+        {
+          "name": "Node.js",
+          "icon": "nodejs"
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "tailwindcss"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "قواعد البيانات والتخزين",
+      "items": [
+        {
+          "name": "SQLite",
+          "icon": "sqlite"
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "postgresql"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "الأدوات والنشر",
+      "items": [
+        {
+          "name": "Git",
+          "icon": "git"
+        },
+        {
+          "name": "GitHub",
+          "icon": "github"
+        },
+        {
+          "name": "Vite",
+          "icon": "vite"
+        },
+        {
+          "name": "Figma",
+          "icon": "figma"
+        }
+      ]
+    },
+    {
+      "id": "competencies",
+      "title": "الكفاءات الأساسية",
+      "items": [
+        {
+          "name": "تصميم الواجهات"
+        },
+        {
+          "name": "تفكير المنتج"
+        },
+        {
+          "name": "تدريس البرمجة"
+        },
+        {
+          "name": "النمذجة الرياضية"
+        }
+      ]
+    }
+  ]
+}

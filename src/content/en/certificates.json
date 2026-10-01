@@ -1,0 +1,174 @@
+{
+  "eyebrow": "Credentials",
+  "title": "Learning, on the record.",
+  "intro": "Courses and certifications that back up what I build. Filter by topic, or open any credential to verify it.",
+  "locale": "en-US",
+  "categories": [
+    {
+      "id": "programming",
+      "label": "Programming"
+    },
+    {
+      "id": "web",
+      "label": "Web Development"
+    },
+    {
+      "id": "security",
+      "label": "Security"
+    },
+    {
+      "id": "ai",
+      "label": "AI"
+    },
+    {
+      "id": "general",
+      "label": "General"
+    }
+  ],
+  "items": [
+    {
+      "id": "html-css-javascript",
+      "title": "Introduction to HTML, CSS, & JavaScript",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2026-08",
+      "description": "Building structured, styled and interactive web pages, from HTML and CSS basics to DOM manipulation and form validation.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ],
+      "category": "web",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/GY5HPDV3733V"
+    },
+    {
+      "id": "intro-python",
+      "title": "Introduction to Python",
+      "issuer": "Coursera",
+      "image": "",
+      "issued": "2026-07",
+      "description": "Python fundamentals: variables, input, decisions and loops.",
+      "tags": [
+        "Python",
+        "Programming Principles"
+      ],
+      "category": "programming",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/6ZUX3MGSKKE1"
+    },
+    {
+      "id": "bootstrap",
+      "title": "Developing Websites and Front-Ends with Bootstrap",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2026-05",
+      "description": "Building flexible, responsive websites and UI components with the Bootstrap framework.",
+      "tags": [
+        "Bootstrap",
+        "CSS",
+        "Responsive Design"
+      ],
+      "category": "web",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/35NUYCK6REAE"
+    },
+    {
+      "id": "resume-google-docs",
+      "title": "Create a Resume and Cover Letter with Google Docs",
+      "issuer": "Coursera",
+      "image": "",
+      "issued": "2026-03",
+      "description": "Writing and formatting a professional resume and cover letter, then exporting them.",
+      "tags": [
+        "Google Docs",
+        "Business Writing"
+      ],
+      "category": "general",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/K7KVDAG8M0VE"
+    },
+    {
+      "id": "global-diplomacy",
+      "title": "Global Diplomacy: the United Nations in the World",
+      "issuer": "University of London",
+      "image": "",
+      "issued": "2025-12",
+      "description": "A look at how the United Nations works in international relations, policy and sustainable development.",
+      "tags": [
+        "Diplomacy",
+        "International Relations",
+        "Policy Analysis"
+      ],
+      "category": "general",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/4K0TUTR96T1N"
+    },
+    {
+      "id": "cpp-basics",
+      "title": "C++ Basics: Selection and Iteration",
+      "issuer": "Codio",
+      "image": "",
+      "issued": "2025-11",
+      "description": "C++ fundamentals: variables, operators, selection statements and loops.",
+      "tags": [
+        "C++",
+        "Computational Logic",
+        "Computer Science"
+      ],
+      "category": "programming",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/LRZCA7ILPLEG"
+    },
+    {
+      "id": "kali-linux",
+      "title": "Ethical Hacking with Kali Linux",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2025-11",
+      "description": "Hands-on penetration testing with Kali Linux tools in controlled lab environments, plus Bash automation.",
+      "tags": [
+        "Kali Linux",
+        "Penetration Testing",
+        "Bash",
+        "Linux"
+      ],
+      "category": "security",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/PTKJH5HK2R8C"
+    },
+    {
+      "id": "ethical-hacking-principles",
+      "title": "Introduction to Ethical Hacking Principles",
+      "issuer": "SkillUp",
+      "image": "",
+      "issued": "2025-09",
+      "description": "The roles, legal boundaries and responsible-disclosure practices behind ethical hacking.",
+      "tags": [
+        "Ethical Hacking",
+        "Cybersecurity",
+        "GDPR"
+      ],
+      "category": "security",
+      "featured": false,
+      "url": "https://www.coursera.org/account/accomplishments/verify/UHXBUI23S8VN"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Generative AI: Prompt Engineering Basics",
+      "issuer": "IBM",
+      "image": "",
+      "issued": "2025-09",
+      "description": "Core prompt engineering techniques and best practices for getting reliable results from generative AI models.",
+      "tags": [
+        "Prompt Engineering",
+        "Generative AI",
+        "ChatGPT"
+      ],
+      "category": "ai",
+      "featured": true,
+      "url": "https://www.coursera.org/account/accomplishments/verify/ACXLM10P8RBS"
+    }
+  ]
+}

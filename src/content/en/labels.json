@@ -15,5 +15,16 @@
   "notFoundHome": "Return home",
   "projectIdea": "The idea",
   "projectProblem": "The problem",
-  "projectBuild": "What I built"
+  "projectBuild": "What I built",
+  "viewCredential": "View Credential",
+  "featured": "Featured",
+  "issued": "Issued",
+  "allCategories": "All",
+  "filterBy": "Filter by category",
+  "noResults": "Nothing in this category yet.",
+  "skillsCta": "See the full skills map",
+  "certificatesLabel": "Credentials",
+  "sourceCode": "Source code",
+  "liveSite": "Live site",
+  "links": "Links"
 }
